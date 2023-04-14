@@ -261,7 +261,7 @@ void LCD_DisplayTemperature(void)
   unsigned int temp=0;
   FILE * fp;
   unsigned char  buffer[80] = {0};
-  temp=Obaintemperature();                  //Gets the temperature of the CPU
+  temp=Obtaintemperature();                  //Gets the temperature of the CPU
   fp=popen("top -bn1 | grep load | awk '{printf \"%.2f\", $(NF-2)}'","r");    //Gets the load on the CPU
   fgets(buffer, sizeof (buffer),fp);                                    //Read the CPU load
   pclose(fp);
@@ -297,7 +297,7 @@ void LCD_DisplayTemperature(void)
   OLED_ShowString(87,3,buffer,8);                        //Display CPU load
 }
 
-unsigned char Obaintemperature(void)
+unsigned char Obtaintemperature(void)
 {
   FILE *fd;
   unsigned int temp;
