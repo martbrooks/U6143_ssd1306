@@ -42,7 +42,7 @@ void ssd1306_begin(unsigned int switchvcc, unsigned int i2caddr); //switchvcc sh
 void OLED_ShowString(unsigned char x,unsigned char y, unsigned char *p,unsigned char Char_Size);
 void OLED_ShowChar(unsigned char x,unsigned char y,unsigned char chr,unsigned char Char_Size);
 void OLED_Set_Pos(unsigned char x, unsigned char y);
-void OLED_WR_Byte(unsigned dat,unsigned cmd);  
+void OLED_WR_Byte(unsigned dat,unsigned cmd);
 void Write_IIC_Data(unsigned char IIC_Data);
 void Write_IIC_Command(unsigned char IIC_Command);
 void OLED_DrawBMP(unsigned char x0, unsigned char y0,unsigned char x1, unsigned char y1,unsigned char BMP[][512],unsigned char);
