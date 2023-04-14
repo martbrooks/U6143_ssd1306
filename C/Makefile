@@ -1,4 +1,4 @@
-Target		= display
+Target		= pirack_oled_display
 CXX         	= gcc
 ODIR		= obj
 SRC		=$(wildcard *.c)
