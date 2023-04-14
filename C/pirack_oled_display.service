@@ -1,0 +1,15 @@
+[Unit]
+Description=Pi Rack OLED Display
+
+[Service]
+User=root
+WorkingDirectory=/tmp
+ExecStart=/usr/local/bin/pirack_oled_display
+SuccessExitStatus=143
+TimeoutStopSec=10
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
+
